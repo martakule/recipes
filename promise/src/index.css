@@ -2,4 +2,95 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.App {
+	width:90%;
+	max-width: 1000px;
+	margin:0 auto;
+}
+
+.header {
+	text-align: center;
+	background-color:#f19633;
+	padding: 15px;
+	max-width: 500px;
+	margin:1em auto;
+}
+
+.header img {
+	width:80px;
+}
+
+.header h1 {
+	color:white;
+	letter-spacing: 1px;
+	margin:0;
+}
+
+.recipeList {
+	list-style: none;
+	padding:0;
+	margin:1em auto;
+	max-width: 500px;
+}
+
+.recipeItem {
+	margin-bottom: .5em;
+	background-color:#ffd872;
+	margin:.5em;
+	padding:.5em;
+	color:#2f2f2f;
+}
+
+.recipeItem * {
+	display: inline-block;
+}
+
+.recipeLabel {
+	width:75%;
+}
+
+.calories {
+	float: right;
+}
+
+.loader {
+  margin:2em auto;
+  width: 80%;
+  text-align: center;
+  color: #f19633;
+  font-weight: bold;
+}
+
+.loadingSpinner {
+  height: 50px;
+	animation: spin infinite 3s linear;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.errorMessage {
+	color:#D8000C;
+	background-color: #ffcaca;
+	margin:1em auto;
+	padding: 1em;
+	width:80%;
+	max-width: 500px;
+	text-align: center;
+}
+
+@media and screen (max-width: 359px) {
+	.recipeLabel {
+		width:65%;
+	}
 }
