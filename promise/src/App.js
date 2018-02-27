@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Header} from "./components/header";
+import {SearchBar} from "./components/search-bar";
 import {List} from "./components/list";
 
 const APP_ID = '6d8762c4'; 
@@ -19,6 +20,8 @@ class App extends Component {
 
   componentDidMount() {this.recipeSearch();}
 
+  updateSearchTerm = e => this.setState({searchTerm:e.target.value});
+
   recipeSearch = e => {
     this.setState({error:""});
     this.setState({loading:true});
@@ -34,9 +37,9 @@ class App extends Component {
       }
     })
     .then(data => {
-      console.log(data);
       this.setState( {recipes:data.hits.map(hit => hit.recipe)} );
       if (this.state.recipes.length === 0) {this.setState({error:"input"})}
+      console.log(this.state.recipes);
     })
     .catch(error => {
       this.setState({error:"network"});
@@ -48,6 +51,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header>Recipe Search</Header>
+        <SearchBar
+          inputValue={this.state.searchTerm}
+          onInputChange={this.updateSearchTerm}
+          initializeSearch={this.recipeSearch}
+        />
         <List 
           recipes={this.state.recipes} 
           error={this.state.error}

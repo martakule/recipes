@@ -34,6 +34,27 @@ body {
 	margin:0;
 }
 
+.searchBar {
+	margin:1em auto;
+	max-width: 500px;
+}
+
+.searchBar input {
+	width:75%;
+	height: 60px;
+	font-size: 1.2em;
+	color:#2f2f2f;
+	padding-left: 5px;
+}
+
+.searchBar button {
+	width:20%;
+	background-color:#6ab12d;
+	margin:7px 0 0 5px;
+	padding: 5px;
+	float:right;
+}
+
 .recipeList {
 	list-style: none;
 	padding:0;
@@ -44,7 +65,7 @@ body {
 .recipeItem {
 	margin-bottom: .5em;
 	background-color:#ffd872;
-	margin:.5em;
+	margin:.5em 0;
 	padding:.5em;
 	color:#2f2f2f;
 }
@@ -89,7 +110,7 @@ body {
 	text-align: center;
 }
 
-@media and screen (max-width: 359px) {
+@media screen and (max-width: 359px) {
 	.recipeLabel {
 		width:65%;
 	}
