@@ -39,7 +39,6 @@ class App extends Component {
     .then(data => {
       this.setState( {recipes:data.hits.map(hit => hit.recipe)} );
       if (this.state.recipes.length === 0) {this.setState({error:"input"})}
-      console.log(this.state.recipes);
     })
     .catch(error => {
       this.setState({error:"network"});

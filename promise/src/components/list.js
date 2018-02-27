@@ -1,5 +1,5 @@
 import React from 'react';
-import {ListItem} from './list-item';
+import ListItem from './list-item';
 import {ErrorMessage} from './error-message';
 import loader from './orange.svg';
 

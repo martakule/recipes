@@ -55,7 +55,7 @@ body {
 	float:right;
 }
 
-.recipeList {
+ul.recipeList {
 	list-style: none;
 	padding:0;
 	margin:1em auto;
@@ -63,14 +63,22 @@ body {
 }
 
 .recipeItem {
-	margin-bottom: .5em;
-	background-color:#ffd872;
+	margin-bottom: .5em;	
 	margin:.5em 0;
-	padding:.5em;
 	color:#2f2f2f;
 }
 
-.recipeItem * {
+.recipeHeader {
+	padding:.5em;
+	background-color:#ffd872;
+}
+
+.recipeHeader:hover {
+	background-color: #ffc107;
+	cursor: pointer;
+}
+
+.recipeHeader * {
 	display: inline-block;
 }
 
@@ -80,6 +88,38 @@ body {
 
 .calories {
 	float: right;
+}
+
+.details {
+	margin-top: 7px;
+	padding: 10px 0;
+	width:100%;
+	text-align: center;
+	border:dotted #ffd872 5px;
+}
+
+.details img {
+	max-width: 100%;
+	border:10px white solid;
+	box-shadow: 5px 5px 15px grey;
+}
+
+.details a {
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 1em;
+	padding: 10px 5px;
+	width:130px;
+	background-color: #6ab12d;
+	color:white;
+}
+
+.details a:visited {
+	background-color: #d33934;
+}
+
+.details a:hover {
+	background: #f19633;
 }
 
 .loader {
