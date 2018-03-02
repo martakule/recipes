@@ -1,9 +1,7 @@
 import React from 'react';
 
 export const Details = ({view, data}) => {
-	console.log("details",view)
 	if(view===true){
-		console.log("showing")
 		return(
 			<div className="details">
 				<img src={data.image} alt={data.label}/>

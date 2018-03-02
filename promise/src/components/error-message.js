@@ -1,13 +1,25 @@
 import React from 'react';
+import input from './input.png';
+import network from './network.png';
 
 export const ErrorMessage = ({error}) => {
 
 	if(error==="network"){
-		return(<p className="errorMessage">Sorry, there seems to be a network error.<br/>Try again in a while.</p>)
+		return(
+			<div className="errorMessage">
+				<img src={network} alt=""/>
+				<p>Sorry, there seems to be a network error. Try again in a while.</p>
+			</div>
+		)
 	}
 
 	else if(error==="input"){
-		return(<p className="errorMessage">Sorry, the term you searched didn't return any recipes.<br/>Try another term.</p>)
+		return(
+			<div className="errorMessage">
+				<img src={input} alt=""/>
+				<p>Sorry, the term you searched didn't return any recipes. Try another term.</p>
+			</div>
+		)
 	}
 
 }

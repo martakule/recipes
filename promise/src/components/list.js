@@ -15,7 +15,7 @@ export const List = ({recipes, error, loading}) => {
 	else if(error){return(<ErrorMessage error={error}/>)}
 
 	else {		
-		const recipeItems = recipes.map(recipe => <ListItem data={recipe} key={recipe.uri.slice(-32)}/>);	
+		const recipeItems = recipes.map(recipe => <ListItem data={recipe} key={recipe.uri}/>);	
 		return(
 			<ul className="recipeList">{recipeItems}</ul>
 		);			

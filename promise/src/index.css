@@ -17,6 +17,7 @@ body {
 }
 
 .header {
+	position: relative;
 	text-align: center;
 	background-color:#f19633;
 	padding: 15px;
@@ -34,9 +35,72 @@ body {
 	margin:0;
 }
 
+.infoIcon {
+	display: block;
+	background-color: #6ab12d;
+	color:white;
+	border-radius: 50%;
+	padding-top: 9px;
+	height:40px;
+	width:40px;
+	cursor: pointer;
+	position: absolute;
+	bottom:10px;
+	right:10px;
+}
+
+.infoClass {
+	text-align: left;
+	background-color: white;
+	border:dotted #ffd872 6px;
+	border-radius: 3px;
+	padding: .7em;
+	position:fixed;
+	top:25%;
+	right:25%;
+	color:#2f2f2f;
+}
+
+.infoClass span {
+	text-align: center;
+	display: inline-block;
+	background-color: #6ab12d;
+	color:white;
+	height:25px;
+	width:25px;	
+	border-radius: 50%;
+	float: right;
+}
+
+.infoClass a {
+	color: #6ab12d;
+	text-decoration: none;
+}
+
+.infoClass a:visited {
+	color: #d33934;
+}
+
+.infoClass a:hover {
+	color: #f19633;
+}
+
 .searchBar {
 	margin:1em auto;
 	max-width: 500px;
+	padding:1em;
+}
+
+.fixedBar {
+	position:fixed;
+	top:0;
+  left: 50%;
+  transform: translateX(-50%);
+	background-color: white;
+	width:90%;
+	max-width: 500px;
+	margin: 0;
+	box-shadow: 0 2px 2px grey;
 }
 
 .searchBar input {
@@ -45,10 +109,11 @@ body {
 	font-size: 1.2em;
 	color:#2f2f2f;
 	padding-left: 5px;
+	border: 2px solid #f19633;
 }
 
 .searchBar button {
-	width:20%;
+	width:22%;
 	background-color:#6ab12d;
 	margin:7px 0 0 5px;
 	padding: 5px;
@@ -148,6 +213,11 @@ ul.recipeList {
 	width:80%;
 	max-width: 500px;
 	text-align: center;
+}
+
+.errorMessage img {
+	float:left;
+	margin-top: .5em;
 }
 
 @media screen and (max-width: 359px) {
