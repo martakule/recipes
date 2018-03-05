@@ -57,7 +57,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header toggleInfo={this.state.toggleInfo}>Recipe Search</Header>
+        <Header 
+          showInfo={e => this.setState({toggleInfo:true})}
+          hideInfo={e => this.setState({toggleInfo:false})}
+          infoView={this.state.toggleInfo}
+        >
+          Recipe Search
+        </Header>
         <SearchBar
           inputValue={this.state.searchTerm}
           onInputChange={this.updateSearchTerm}
