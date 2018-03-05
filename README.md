@@ -1,3 +1,5 @@
+This is my first React app, based on the Edamam API. I made it before learning Redux, so events and API calls are handled by local states. It started as the homework described below.
+
 Homework for working with Promises (via fetch) and updating react state
 
 if you see `STRETCH GOAL` - think of it as an optional additional challenge.
