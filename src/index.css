@@ -231,7 +231,7 @@ ul.recipeList {
 	margin-top: .5em;
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 390px) {
 	.recipeLabel {
 		width:65%;
 	}
